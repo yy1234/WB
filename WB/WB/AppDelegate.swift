@@ -13,11 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let size = UIScreen.main.bounds
         window=UIWindow(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        window?.rootViewController=WBHomeViewController()
+        window?.rootViewController=WBTabbarViewController()
         window?.makeKeyAndVisible()
         return true
     }
