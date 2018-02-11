@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD62DEFD202FDDEC0098AD95 /* Bundle+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62DEFC202FDDEC0098AD95 /* Bundle+Extentions.swift */; };
 		DD9D5CD6202A93B300C16CC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9D5CD5202A93B300C16CC4 /* AppDelegate.swift */; };
 		DD9D5CDD202A93B300C16CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9D5CDC202A93B300C16CC4 /* Assets.xcassets */; };
 		DD9D5CE0202A93B300C16CC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9D5CDE202A93B300C16CC4 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD62DEFC202FDDEC0098AD95 /* Bundle+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extentions.swift"; sourceTree = "<group>"; };
 		DD9D5CD2202A93B300C16CC4 /* WB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9D5CD5202A93B300C16CC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD9D5CDC202A93B300C16CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD62DEF9202FDD580098AD95 /* Extentions(swift) */ = {
+			isa = PBXGroup;
+			children = (
+				DD62DEFC202FDDEC0098AD95 /* Bundle+Extentions.swift */,
+			);
+			path = "Extentions(swift)";
+			sourceTree = "<group>";
+		};
+		DD62DEFB202FDDBA0098AD95 /* Addtions(OC) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Addtions(OC)";
+			sourceTree = "<group>";
+		};
 		DD9D5CC9202A93B300C16CC4 = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +224,8 @@
 		DD9D5D27202AAE9D00C16CC4 /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				DD62DEFB202FDDBA0098AD95 /* Addtions(OC) */,
+				DD62DEF9202FDD580098AD95 /* Extentions(swift) */,
 			);
 			path = "Tools(工具)";
 			sourceTree = "<group>";
@@ -344,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD62DEFD202FDDEC0098AD95 /* Bundle+Extentions.swift in Sources */,
 				DD9D5D29202ACCB500C16CC4 /* WBTabbarViewController.swift in Sources */,
 				DD9D5D31202ACD8000C16CC4 /* WBHomeViewController.swift in Sources */,
 				DD9D5CD6202A93B300C16CC4 /* AppDelegate.swift in Sources */,
