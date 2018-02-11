@@ -17,6 +17,9 @@
 		DD9D5D2B202ACCE500C16CC4 /* WBNavMianController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9D5D2A202ACCE500C16CC4 /* WBNavMianController.swift */; };
 		DD9D5D2D202ACCFB00C16CC4 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9D5D2C202ACCFB00C16CC4 /* WBBaseViewController.swift */; };
 		DD9D5D31202ACD8000C16CC4 /* WBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9D5D30202ACD8000C16CC4 /* WBHomeViewController.swift */; };
+		DDA474B4202FF585004EE6E3 /* WBMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B3202FF585004EE6E3 /* WBMessageController.swift */; };
+		DDA474B8202FF5AA004EE6E3 /* WBProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B7202FF5AA004EE6E3 /* WBProfileController.swift */; };
+		DDA474BA202FF5FE004EE6E3 /* WBDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B9202FF5FE004EE6E3 /* WBDiscoverController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		DD9D5D2A202ACCE500C16CC4 /* WBNavMianController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBNavMianController.swift; sourceTree = "<group>"; };
 		DD9D5D2C202ACCFB00C16CC4 /* WBBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
 		DD9D5D30202ACD8000C16CC4 /* WBHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBHomeViewController.swift; sourceTree = "<group>"; };
+		DDA474B3202FF585004EE6E3 /* WBMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBMessageController.swift; sourceTree = "<group>"; };
+		DDA474B7202FF5AA004EE6E3 /* WBProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBProfileController.swift; sourceTree = "<group>"; };
+		DDA474B9202FF5FE004EE6E3 /* WBDiscoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDiscoverController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +192,7 @@
 		DD9D5D22202AAE9D00C16CC4 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				DDA474B9202FF5FE004EE6E3 /* WBDiscoverController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -193,6 +200,7 @@
 		DD9D5D23202AAE9D00C16CC4 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				DDA474B3202FF585004EE6E3 /* WBMessageController.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 		DD9D5D24202AAE9D00C16CC4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				DDA474B7202FF5AA004EE6E3 /* WBProfileController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -365,10 +374,13 @@
 			files = (
 				DD62DEFD202FDDEC0098AD95 /* Bundle+Extentions.swift in Sources */,
 				DD9D5D29202ACCB500C16CC4 /* WBTabbarViewController.swift in Sources */,
+				DDA474B4202FF585004EE6E3 /* WBMessageController.swift in Sources */,
 				DD9D5D31202ACD8000C16CC4 /* WBHomeViewController.swift in Sources */,
 				DD9D5CD6202A93B300C16CC4 /* AppDelegate.swift in Sources */,
 				DD9D5D2B202ACCE500C16CC4 /* WBNavMianController.swift in Sources */,
+				DDA474B8202FF5AA004EE6E3 /* WBProfileController.swift in Sources */,
 				DD9D5D2D202ACCFB00C16CC4 /* WBBaseViewController.swift in Sources */,
+				DDA474BA202FF5FE004EE6E3 /* WBDiscoverController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

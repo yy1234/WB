@@ -24,7 +24,11 @@ extension WBTabbarViewController{
     
     //设置子控制器
     private func setUpChildController(){
-        let arry = [["className":"WBHomeViewController","title":"首页","imageName":""]]
+        let arry = [["className":"WBHomeViewController","title":"首页","imageName":"message"],
+                    ["className":"WBMessageController","title":"消息","imageName":"address_book"],
+                    ["className":"WBDiscoverController","title":"发现","imageName":"work"],
+                    ["className":"WBProfileController","title":"我","imageName":"me"],
+                    ]
         var VCArr = [UIViewController]()
         for dict in arry {
             VCArr.append(controller(dic: dict))
@@ -44,6 +48,9 @@ extension WBTabbarViewController{
         }
         let VC=VCClass.init()
         VC.title=title
+        VC.tabBarItem.image=UIImage.init(named: "tabbar_"+image)
+        //按照原图预览
+        VC.tabBarItem.selectedImage=UIImage.init(named: "tabbar_"+image+"_select")?.withRenderingMode(.alwaysOriginal)
         let nav = WBNavMianController.init(rootViewController:VC)
         return nav
     }
