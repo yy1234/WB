@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD34F79E202FFCFF00D21A36 /* UIColor+Addtions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34F79D202FFCFF00D21A36 /* UIColor+Addtions.swift */; };
 		DD62DEFD202FDDEC0098AD95 /* Bundle+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62DEFC202FDDEC0098AD95 /* Bundle+Extentions.swift */; };
 		DD9D5CD6202A93B300C16CC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9D5CD5202A93B300C16CC4 /* AppDelegate.swift */; };
 		DD9D5CDD202A93B300C16CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9D5CDC202A93B300C16CC4 /* Assets.xcassets */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD34F797202FF9EF00D21A36 /* WB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WB-Bridging-Header.h"; sourceTree = "<group>"; };
+		DD34F79D202FFCFF00D21A36 /* UIColor+Addtions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Addtions.swift"; sourceTree = "<group>"; };
 		DD62DEFC202FDDEC0098AD95 /* Bundle+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extentions.swift"; sourceTree = "<group>"; };
 		DD9D5CD2202A93B300C16CC4 /* WB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9D5CD5202A93B300C16CC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		DD62DEF9202FDD580098AD95 /* Extentions(swift) */ = {
 			isa = PBXGroup;
 			children = (
+				DD34F79D202FFCFF00D21A36 /* UIColor+Addtions.swift */,
 				DD62DEFC202FDDEC0098AD95 /* Bundle+Extentions.swift */,
 			);
 			path = "Extentions(swift)";
@@ -126,6 +130,7 @@
 			children = (
 				DD9D5D1E202AAE9D00C16CC4 /* Class */,
 				DD9D5CD5202A93B300C16CC4 /* AppDelegate.swift */,
+				DD34F797202FF9EF00D21A36 /* WB-Bridging-Header.h */,
 				DD9D5CDC202A93B300C16CC4 /* Assets.xcassets */,
 				DD9D5CDE202A93B300C16CC4 /* LaunchScreen.storyboard */,
 				DD9D5CE1202A93B300C16CC4 /* Info.plist */,
@@ -307,6 +312,7 @@
 				TargetAttributes = {
 					DD9D5CD1202A93B300C16CC4 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 					};
 					DD9D5CE5202A93B300C16CC4 = {
@@ -377,6 +383,7 @@
 				DDA474B4202FF585004EE6E3 /* WBMessageController.swift in Sources */,
 				DD9D5D31202ACD8000C16CC4 /* WBHomeViewController.swift in Sources */,
 				DD9D5CD6202A93B300C16CC4 /* AppDelegate.swift in Sources */,
+				DD34F79E202FFCFF00D21A36 /* UIColor+Addtions.swift in Sources */,
 				DD9D5D2B202ACCE500C16CC4 /* WBNavMianController.swift in Sources */,
 				DDA474B8202FF5AA004EE6E3 /* WBProfileController.swift in Sources */,
 				DD9D5D2D202ACCFB00C16CC4 /* WBBaseViewController.swift in Sources */,
@@ -539,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 852BN2UPEC;
@@ -548,6 +556,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8b1872d2-8abd-4015-a6ef-23f143c432e0";
 				PROVISIONING_PROFILE_SPECIFIER = Ict_Groupv_Ent;
+				SWIFT_OBJC_BRIDGING_HEADER = "WB/Class/Tools(工具)/Addtions(OC)/WB-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -558,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 852BN2UPEC;
@@ -567,6 +578,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8b1872d2-8abd-4015-a6ef-23f143c432e0";
 				PROVISIONING_PROFILE_SPECIFIER = Ict_Groupv_Ent;
+				SWIFT_OBJC_BRIDGING_HEADER = "WB/Class/Tools(工具)/Addtions(OC)/WB-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
