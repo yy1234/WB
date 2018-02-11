@@ -16,14 +16,21 @@ class WBTabbarViewController: UITabBarController {
         setUpChildController()
        
         
+        //添加中间的加好按钮
         let centerBtn=UIButton.init()
         centerBtn.backgroundColor=UIColor.orange
         centerBtn.frame=CGRect(x: 0, y: 0, width: 68, height: 68)
         tabBar.addSubview(centerBtn)
         let count = CGFloat(childViewControllers.count)
         let w = (tabBar.frame.size.width/count)-1
+        
+        //insetBy正数向内，负数向外
         centerBtn.frame=tabBar.bounds.insetBy(dx: 2*w, dy: 0)
         centerBtn.addTarget(self, action: #selector(centerBtnClick), for: .touchUpInside)
+    }
+    
+    @objc func centerBtnClick(){
+        print("撰写微博")
     }
     
 }
@@ -77,10 +84,6 @@ extension WBTabbarViewController{
     }
     
   
-    @objc func centerBtnClick(){
-        
-        
-    }
   
 }
 

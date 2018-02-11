@@ -15,4 +15,15 @@ extension UIColor{
         
         return UIColor(red: r, green: g, blue: b, alpha: 1.0)
     }
+    
+    class func randomColor()->UIColor{
+        let hue = (CGFloat(arc4random()%256)/256.0);
+        
+        let saturation = (CGFloat(arc4random()%128)/256.0)+0.5;
+        
+        let brightness = (CGFloat(arc4random()%128)/256.0)+0.5;
+        
+        let color = UIColor(red: hue, green: saturation, blue: brightness, alpha: 1.0)
+        return color
+        }
 }

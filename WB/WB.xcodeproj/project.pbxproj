@@ -21,6 +21,7 @@
 		DDA474B4202FF585004EE6E3 /* WBMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B3202FF585004EE6E3 /* WBMessageController.swift */; };
 		DDA474B8202FF5AA004EE6E3 /* WBProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B7202FF5AA004EE6E3 /* WBProfileController.swift */; };
 		DDA474BA202FF5FE004EE6E3 /* WBDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B9202FF5FE004EE6E3 /* WBDiscoverController.swift */; };
+		DDFDBD6220302A96002F9013 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDBD6120302A96002F9013 /* WBDemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		DDA474B3202FF585004EE6E3 /* WBMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBMessageController.swift; sourceTree = "<group>"; };
 		DDA474B7202FF5AA004EE6E3 /* WBProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBProfileController.swift; sourceTree = "<group>"; };
 		DDA474B9202FF5FE004EE6E3 /* WBDiscoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDiscoverController.swift; sourceTree = "<group>"; };
+		DDFDBD6120302A96002F9013 /* WBDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 		DD9D5D25202AAE9D00C16CC4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DDFDBD6020302A83002F9013 /* 测试 */,
 				DD9D5D28202ACCB500C16CC4 /* WBTabbarViewController.swift */,
 				DD9D5D2A202ACCE500C16CC4 /* WBNavMianController.swift */,
 				DD9D5D2C202ACCFB00C16CC4 /* WBBaseViewController.swift */,
@@ -242,6 +245,14 @@
 			children = (
 			);
 			path = "Addtions(OC )";
+			sourceTree = "<group>";
+		};
+		DDFDBD6020302A83002F9013 /* 测试 */ = {
+			isa = PBXGroup;
+			children = (
+				DDFDBD6120302A96002F9013 /* WBDemoViewController.swift */,
+			);
+			path = "测试";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +397,7 @@
 				DD34F79E202FFCFF00D21A36 /* UIColor+Addtions.swift in Sources */,
 				DD9D5D2B202ACCE500C16CC4 /* WBNavMianController.swift in Sources */,
 				DDA474B8202FF5AA004EE6E3 /* WBProfileController.swift in Sources */,
+				DDFDBD6220302A96002F9013 /* WBDemoViewController.swift in Sources */,
 				DD9D5D2D202ACCFB00C16CC4 /* WBBaseViewController.swift in Sources */,
 				DDA474BA202FF5FE004EE6E3 /* WBDiscoverController.swift in Sources */,
 			);
