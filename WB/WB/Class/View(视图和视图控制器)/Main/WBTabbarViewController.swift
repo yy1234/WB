@@ -9,19 +9,30 @@
 import UIKit
 
 class WBTabbarViewController: UITabBarController {
-
+//    var centerBtn:UIButton
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor=UIColor.white
         setUpChildController()
+       
+        
+        let centerBtn=UIButton.init()
+        centerBtn.backgroundColor=UIColor.orange
+        centerBtn.frame=CGRect(x: 0, y: 0, width: 68, height: 68)
+        tabBar.addSubview(centerBtn)
+        let count = CGFloat(childViewControllers.count)
+        let w = (tabBar.frame.size.width/count)-1
+        centerBtn.frame=tabBar.bounds.insetBy(dx: 2*w, dy: 0)
+        centerBtn.addTarget(self, action: #selector(centerBtnClick), for: .touchUpInside)
     }
-
+    
 }
+
 
 //类似于OC中的分类，也可以用于代码区分
 //可以你把功能相同的函数放入一个extention中
 extension WBTabbarViewController{
-    
+
     //设置子控制器
     private func setUpChildController(){
         let arry = [["className":"WBHomeViewController","title":"首页","imageName":"message"],
@@ -60,10 +71,18 @@ extension WBTabbarViewController{
         VC.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:UIColor.HexClour(hexColor: 0x5da8de)], for: .highlighted)
         
         //修改item的字体大小，并且只能在normal模式下
-        VC.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.font:UIFont.systemFont(ofSize: 14)], for: .normal)
+        VC.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.font:UIFont.systemFont(ofSize: 12)], for: .normal)
         
         return nav
     }
+    
+  
+    @objc func centerBtnClick(){
+        
+        
+    }
+  
 }
+
 
 

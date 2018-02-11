@@ -98,13 +98,6 @@
 			path = "Extentions(swift)";
 			sourceTree = "<group>";
 		};
-		DD62DEFB202FDDBA0098AD95 /* Addtions(OC) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Addtions(OC)";
-			sourceTree = "<group>";
-		};
 		DD9D5CC9202A93B300C16CC4 = {
 			isa = PBXGroup;
 			children = (
@@ -238,10 +231,17 @@
 		DD9D5D27202AAE9D00C16CC4 /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
-				DD62DEFB202FDDBA0098AD95 /* Addtions(OC) */,
+				DDA6AA0A20300DF4003D058E /* Addtions(OC ) */,
 				DD62DEF9202FDD580098AD95 /* Extentions(swift) */,
 			);
 			path = "Tools(工具)";
+			sourceTree = "<group>";
+		};
+		DDA6AA0A20300DF4003D058E /* Addtions(OC ) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Addtions(OC )";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,7 +556,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8b1872d2-8abd-4015-a6ef-23f143c432e0";
 				PROVISIONING_PROFILE_SPECIFIER = Ict_Groupv_Ent;
-				SWIFT_OBJC_BRIDGING_HEADER = "WB/Class/Tools(工具)/Addtions(OC)/WB-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -578,7 +578,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8b1872d2-8abd-4015-a6ef-23f143c432e0";
 				PROVISIONING_PROFILE_SPECIFIER = Ict_Groupv_Ent;
-				SWIFT_OBJC_BRIDGING_HEADER = "WB/Class/Tools(工具)/Addtions(OC)/WB-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
