@@ -12,24 +12,17 @@ class WBDemoViewController: WBBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title="第\(navigationController?.childViewControllers.count ?? 0)个"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func setUpUI() {
+        super.setUpUI()
+        navigationItem.rightBarButtonItem=UIBarButtonItem.init(title: "下一个", style:.plain, target: self, action: #selector(showNext))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func showNext(){
+        
+        navigationController?.pushViewController(WBDemoViewController(), animated: true)
     }
-    */
-
+    
 }
