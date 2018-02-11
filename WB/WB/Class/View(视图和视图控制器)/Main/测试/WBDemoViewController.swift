@@ -17,7 +17,9 @@ class WBDemoViewController: WBBaseViewController {
 
     override func setUpUI() {
         super.setUpUI()
-        navigationItem.rightBarButtonItem=UIBarButtonItem.init(title: "下一个", style:.plain, target: self, action: #selector(showNext))
+//        navigationItem.rightBarButtonItem=UIBarButtonItem.init(title: "下一个", style:.plain, target: self, action: #selector(showNext))
+        //这是一要设置高亮，并且分装的一段代码
+        navigationItem.rightBarButtonItem=UIBarButtonItem.init(title: "下一个", target: self, action: #selector(showNext))
     }
     
     @objc func showNext(){

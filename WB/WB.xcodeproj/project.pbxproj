@@ -22,6 +22,7 @@
 		DDA474B8202FF5AA004EE6E3 /* WBProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B7202FF5AA004EE6E3 /* WBProfileController.swift */; };
 		DDA474BA202FF5FE004EE6E3 /* WBDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B9202FF5FE004EE6E3 /* WBDiscoverController.swift */; };
 		DDFDBD6220302A96002F9013 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDBD6120302A96002F9013 /* WBDemoViewController.swift */; };
+		DDFDBD6520303E49002F9013 /* UIBarButtonItem+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDBD6420303E49002F9013 /* UIBarButtonItem+Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		DDA474B7202FF5AA004EE6E3 /* WBProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBProfileController.swift; sourceTree = "<group>"; };
 		DDA474B9202FF5FE004EE6E3 /* WBDiscoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDiscoverController.swift; sourceTree = "<group>"; };
 		DDFDBD6120302A96002F9013 /* WBDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
+		DDFDBD6420303E49002F9013 /* UIBarButtonItem+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				DD34F79D202FFCFF00D21A36 /* UIColor+Addtions.swift */,
 				DD62DEFC202FDDEC0098AD95 /* Bundle+Extentions.swift */,
+				DDFDBD6420303E49002F9013 /* UIBarButtonItem+Extention.swift */,
 			);
 			path = "Extentions(swift)";
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				DD9D5D2B202ACCE500C16CC4 /* WBNavMianController.swift in Sources */,
 				DDA474B8202FF5AA004EE6E3 /* WBProfileController.swift in Sources */,
 				DDFDBD6220302A96002F9013 /* WBDemoViewController.swift in Sources */,
+				DDFDBD6520303E49002F9013 /* UIBarButtonItem+Extention.swift in Sources */,
 				DD9D5D2D202ACCFB00C16CC4 /* WBBaseViewController.swift in Sources */,
 				DDA474BA202FF5FE004EE6E3 /* WBDiscoverController.swift in Sources */,
 			);
