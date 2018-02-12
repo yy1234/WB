@@ -29,7 +29,7 @@ class WBHomeViewController: WBBaseViewController {
         
 //        navigationItem.leftBarButtonItem=UIBarButtonItem.init(title: "好友", style: .plain, target: self, action: #selector(showFriend))
         
-        navigationItem.leftBarButtonItem=UIBarButtonItem.init(title: "好友", target: self, action: #selector(showFriend))
+        navItem.leftBarButtonItem=UIBarButtonItem.init(title: "好友", target:self, action: #selector(showFriend))
         
     }
     

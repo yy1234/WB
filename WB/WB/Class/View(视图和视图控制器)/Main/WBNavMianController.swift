@@ -10,13 +10,29 @@ import UIKit
 
 class WBNavMianController: UINavigationController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationBar.isHidden=true
+//        setUpUI()
+    }
+
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
        
         //统一在基类里面隐藏bar,根控制器不计入childViewControllers的数量里面
         if childViewControllers.count>0 {
             viewController.hidesBottomBarWhenPushed=true
+            var title1 = "返回"
+            if childViewControllers.count==1{
+              title1=childViewControllers.first?.title ?? "返回"
+            }
+            if let VC = viewController as? WBBaseViewController{
+                VC.navItem.leftBarButtonItem=UIBarButtonItem.init(title: title1, target: self, action: #selector(popToParent),isBack:true)
+            }
         }
         
         super.pushViewController(viewController, animated: animated)
+    }
+    @objc func popToParent() {
+        popViewController(animated: true)
     }
 }
