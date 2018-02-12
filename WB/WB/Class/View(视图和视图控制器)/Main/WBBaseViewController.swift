@@ -17,6 +17,7 @@ class WBBaseViewController: UIViewController {
     
     }
     
+    //重写title的set方法
     override var title: String?{
         didSet{
             navItem.title=title
@@ -25,9 +26,12 @@ class WBBaseViewController: UIViewController {
     
      func setUpUI()->Void{
         view.backgroundColor=UIColor.randomColor()
+        //自定义返回按钮
         view.addSubview(navigationBar)
         navigationBar.items=[navItem]
-        navigationBar.barTintColor=UIColor.HexClour(hexColor: 0xF6F6F6)
+        
+//        navigationBar.barTintColor=UIColor.HexClour(hexColor: 0xF6F6F6)
+        //设置标题颜色
         navigationBar.titleTextAttributes=[NSAttributedStringKey.foregroundColor:UIColor.darkGray];
     }
  

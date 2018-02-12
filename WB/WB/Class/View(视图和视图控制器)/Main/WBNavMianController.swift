@@ -12,8 +12,6 @@ class WBNavMianController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.isHidden=true
-//        setUpUI()
     }
 
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
@@ -25,6 +23,7 @@ class WBNavMianController: UINavigationController {
             if childViewControllers.count==1{
               title1=childViewControllers.first?.title ?? "返回"
             }
+            //类似与isKindClass
             if let VC = viewController as? WBBaseViewController{
                 VC.navItem.leftBarButtonItem=UIBarButtonItem.init(title: title1, target: self, action: #selector(popToParent),isBack:true)
             }
