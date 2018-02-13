@@ -31,15 +31,24 @@ class WBTabbarViewController: UITabBarController {
     
     @objc func centerBtnClick(){
         print("撰写微博")
+        
+        let nav = UINavigationController.init(rootViewController: UIViewController())
+        self.present(nav, animated: true, completion: nil)
+        
     }
     
+    /// 设备支持方向，用代码的好处是可以在需要横屏的时候，单独处理
+    //设置横屏以后当前的控制器，及其子控制器都是会横屏
+    //本地播放视屏的时候，通过model出来
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        return .portrait
+    }
 }
 
 
 //类似于OC中的分类，也可以用于代码区分
 //可以你把功能相同的函数放入一个extention中
 extension WBTabbarViewController{
-
     //设置子控制器
     private func setUpChildController(){
         let arry = [["className":"WBHomeViewController","title":"首页","imageName":"message"],

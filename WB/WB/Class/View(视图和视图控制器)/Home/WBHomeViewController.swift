@@ -7,15 +7,22 @@
 //
 
 import UIKit
-
+//全局变量一般设置成私有的
+private let cellID="cellID"
 class WBHomeViewController: WBBaseViewController {
-
+    //懒加载一个数组
+    lazy var stateList = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
+//        setUpUI()
     }
   
-    
+    override func loadData() {
+        for i in 0..<15 {
+           stateList.insert(i.description, at: 0)
+        }
+        
+    }
     //从写方法(不能在extetion中重写父类的方法)
     override func setUpUI() {
         super.setUpUI()
@@ -30,7 +37,7 @@ class WBHomeViewController: WBBaseViewController {
 //        navigationItem.leftBarButtonItem=UIBarButtonItem.init(title: "好友", style: .plain, target: self, action: #selector(showFriend))
         
         navItem.leftBarButtonItem=UIBarButtonItem.init(title: "好友", target:self, action: #selector(showFriend))
-        
+        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
     }
     
     @objc func showFriend()->Void{
@@ -46,6 +53,14 @@ class WBHomeViewController: WBBaseViewController {
 
 // MARK: -
 extension WBHomeViewController{
- 
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return stateList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        cell.textLabel?.text=stateList[indexPath.row]
+        return cell
+    }
 }
