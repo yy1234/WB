@@ -12,16 +12,29 @@ private let cellID="cellID"
 class WBHomeViewController: WBBaseViewController {
     //懒加载一个数组
     lazy var stateList = [String]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        setUpUI()
     }
   
     override func loadData() {
-        for i in 0..<15 {
-           stateList.insert(i.description, at: 0)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
+            for i in 0..<15 {
+                if self.isPushing{
+                    self.stateList.append("上拉\(i)")
+                }else{
+                    self.stateList.insert(i.description, at: 0)
+                    
+                }
+            }
+            self.isPushing=false
+            self.refreashController?.endRefreshing()
+            self.tableView?.reloadData()
         }
-        
+       
+     
     }
     //从写方法(不能在extetion中重写父类的方法)
     override func setUpUI() {
@@ -38,16 +51,20 @@ class WBHomeViewController: WBBaseViewController {
         
         navItem.leftBarButtonItem=UIBarButtonItem.init(title: "好友", target:self, action: #selector(showFriend))
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        
+        //刷新按钮
+      
     }
     
     @objc func showFriend()->Void{
         // MARK: - 打印方法的名称
         print(#function)
         let vc = WBDemoViewController()
-        //重复代码，容易忘记
+        //重复代码，容易忘记,在基类里面写入
 //        vc.hidesBottomBarWhenPushed=true
         navigationController?.pushViewController(vc, animated: true)
     }
+    
 }
 
 

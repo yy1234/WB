@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3316A6F958061BD733CE5DDB /* Pods_WB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D944B0B1EE6003207882315 /* Pods_WB.framework */; };
 		DD34F79E202FFCFF00D21A36 /* UIColor+Addtions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34F79D202FFCFF00D21A36 /* UIColor+Addtions.swift */; };
 		DD62DEFD202FDDEC0098AD95 /* Bundle+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62DEFC202FDDEC0098AD95 /* Bundle+Extentions.swift */; };
 		DD9D5CD6202A93B300C16CC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9D5CD5202A93B300C16CC4 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 		DDA474BA202FF5FE004EE6E3 /* WBDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B9202FF5FE004EE6E3 /* WBDiscoverController.swift */; };
 		DDFDBD6220302A96002F9013 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDBD6120302A96002F9013 /* WBDemoViewController.swift */; };
 		DDFDBD6520303E49002F9013 /* UIBarButtonItem+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDBD6420303E49002F9013 /* UIBarButtonItem+Extention.swift */; };
+		DDFDBD682032EBB5002F9013 /* WBVisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDBD672032EBB5002F9013 /* WBVisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D944B0B1EE6003207882315 /* Pods_WB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D870C9AB2B8C78545FEBC1 /* Pods-WB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WB/Pods-WB.debug.xcconfig"; sourceTree = "<group>"; };
+		59B27E31F8A67A901E0BA951 /* Pods-WB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WB.release.xcconfig"; path = "Pods/Target Support Files/Pods-WB/Pods-WB.release.xcconfig"; sourceTree = "<group>"; };
 		DD34F797202FF9EF00D21A36 /* WB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WB-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD34F79D202FFCFF00D21A36 /* UIColor+Addtions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Addtions.swift"; sourceTree = "<group>"; };
 		DD62DEFC202FDDEC0098AD95 /* Bundle+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extentions.swift"; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 		DDA474B9202FF5FE004EE6E3 /* WBDiscoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDiscoverController.swift; sourceTree = "<group>"; };
 		DDFDBD6120302A96002F9013 /* WBDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
 		DDFDBD6420303E49002F9013 /* UIBarButtonItem+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extention.swift"; sourceTree = "<group>"; };
+		DDFDBD672032EBB5002F9013 /* WBVisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBVisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3316A6F958061BD733CE5DDB /* Pods_WB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C9B05226F4110EE20B7E9A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48D870C9AB2B8C78545FEBC1 /* Pods-WB.debug.xcconfig */,
+				59B27E31F8A67A901E0BA951 /* Pods-WB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DD62DEF9202FDD580098AD95 /* Extentions(swift) */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +119,15 @@
 			path = "Extentions(swift)";
 			sourceTree = "<group>";
 		};
+		DD788ECC2032ED8400651952 /* 主控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				DD9D5D28202ACCB500C16CC4 /* WBTabbarViewController.swift */,
+				DD9D5D2A202ACCE500C16CC4 /* WBNavMianController.swift */,
+			);
+			path = "主控制器";
+			sourceTree = "<group>";
+		};
 		DD9D5CC9202A93B300C16CC4 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +135,8 @@
 				DD9D5CE9202A93B300C16CC4 /* WBTests */,
 				DD9D5CF4202A93B300C16CC4 /* WBUITests */,
 				DD9D5CD3202A93B300C16CC4 /* Products */,
+				7C9B05226F4110EE20B7E9A0 /* Pods */,
+				FF785E4FDE9111CC825002CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,9 +246,9 @@
 		DD9D5D25202AAE9D00C16CC4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DDFDBD662032EB78002F9013 /* VisterView(访客视图) */,
 				DDFDBD6020302A83002F9013 /* 测试 */,
-				DD9D5D28202ACCB500C16CC4 /* WBTabbarViewController.swift */,
-				DD9D5D2A202ACCE500C16CC4 /* WBNavMianController.swift */,
+				DD788ECC2032ED8400651952 /* 主控制器 */,
 				DD9D5D2C202ACCFB00C16CC4 /* WBBaseViewController.swift */,
 			);
 			path = Main;
@@ -258,6 +285,22 @@
 			path = "测试";
 			sourceTree = "<group>";
 		};
+		DDFDBD662032EB78002F9013 /* VisterView(访客视图) */ = {
+			isa = PBXGroup;
+			children = (
+				DDFDBD672032EBB5002F9013 /* WBVisterView.swift */,
+			);
+			path = "VisterView(访客视图)";
+			sourceTree = "<group>";
+		};
+		FF785E4FDE9111CC825002CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D944B0B1EE6003207882315 /* Pods_WB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,9 +308,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD9D5CFA202A93B300C16CC4 /* Build configuration list for PBXNativeTarget "WB" */;
 			buildPhases = (
+				ECD32119DF07697E6800D68D /* [CP] Check Pods Manifest.lock */,
 				DD9D5CCE202A93B300C16CC4 /* Sources */,
 				DD9D5CCF202A93B300C16CC4 /* Frameworks */,
 				DD9D5CD0202A93B300C16CC4 /* Resources */,
+				1AD4DD6B5703C6FA99EEA41B /* [CP] Embed Pods Frameworks */,
+				A19F815150BC5A076D686AEA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -387,6 +433,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AD4DD6B5703C6FA99EEA41B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WB/Pods-WB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WB/Pods-WB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A19F815150BC5A076D686AEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WB/Pods-WB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECD32119DF07697E6800D68D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD9D5CCE202A93B300C16CC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -398,6 +500,7 @@
 				DD9D5D31202ACD8000C16CC4 /* WBHomeViewController.swift in Sources */,
 				DD9D5CD6202A93B300C16CC4 /* AppDelegate.swift in Sources */,
 				DD34F79E202FFCFF00D21A36 /* UIColor+Addtions.swift in Sources */,
+				DDFDBD682032EBB5002F9013 /* WBVisterView.swift in Sources */,
 				DD9D5D2B202ACCE500C16CC4 /* WBNavMianController.swift in Sources */,
 				DDA474B8202FF5AA004EE6E3 /* WBProfileController.swift in Sources */,
 				DDFDBD6220302A96002F9013 /* WBDemoViewController.swift in Sources */,
@@ -559,6 +662,7 @@
 		};
 		DD9D5CFB202A93B300C16CC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48D870C9AB2B8C78545FEBC1 /* Pods-WB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -581,6 +685,7 @@
 		};
 		DD9D5CFC202A93B300C16CC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59B27E31F8A67A901E0BA951 /* Pods-WB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -7,11 +7,15 @@
 //
 
 import UIKit
-
+import SnapKit
 /// oc中没有多继承，处理的方式，是通过协议
 ///swift中的写法，更像多继承
 class WBBaseViewController: UIViewController {
     var tableView:UITableView?
+    var userLogon = false
+    
+    var refreashController:UIRefreshControl?
+    var isPushing:Bool=false
     lazy var navigationBar = UINavigationBar.init(frame: CGRect(x: 0, y: 20, width: UIScreen.main.bounds.width, height: 64+20 ))
     lazy var navItem = UINavigationItem()
    
@@ -28,14 +32,15 @@ class WBBaseViewController: UIViewController {
         }
     }
     
-    func loadData() {
-        
+    @objc func loadData() {
+        //子类不实现方法，关闭刷新
+        refreashController?.endRefreshing()
     }
     
      func setUpUI()->Void{
         view.backgroundColor=UIColor.randomColor()
         setNavBar()
-        setTableView()
+        userLogon ? setTableView():setVisterView()
      
     }
  
@@ -49,9 +54,21 @@ class WBBaseViewController: UIViewController {
         view.insertSubview(tableView!, belowSubview: navigationBar)
         //设置tableView的偏移量
         tableView?.contentInset=UIEdgeInsetsMake(navigationBar.bounds.height-20, 0, tabBarController?.tabBar.bounds.height ?? 49, 0)
+        
+        refreashController=UIRefreshControl()
+        tableView?.addSubview(refreashController!)
+        refreashController?.addTarget(self, action: #selector(loadData), for: .valueChanged)
+     
     }
     
-
+    //设置访客视图
+    private func setVisterView(){
+        let visterView = WBVisterView.init(frame: view.bounds)
+        view.insertSubview(visterView, belowSubview: navigationBar)
+        
+    }
+   
+    
     private func setNavBar(){
         view.addSubview(navigationBar)
         navigationBar.items=[navItem]
@@ -73,6 +90,20 @@ extension WBBaseViewController:UITableViewDataSource,UITableViewDelegate{
         return UITableViewCell()
     }
     
+    //判断是否是最后一行，做下拉刷新操作
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        let section = tableView.numberOfSections-1
+        let row = tableView.numberOfRows(inSection: section)
+        if (section<0 || row<0) {
+            return
+        }
+        if row-1==indexPath.row && !isPushing {
+            loadData()
+           isPushing=true
+        }
+        
+    }
 }
 
 
