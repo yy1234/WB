@@ -10,6 +10,7 @@
 		3316A6F958061BD733CE5DDB /* Pods_WB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D944B0B1EE6003207882315 /* Pods_WB.framework */; };
 		DD34F79E202FFCFF00D21A36 /* UIColor+Addtions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34F79D202FFCFF00D21A36 /* UIColor+Addtions.swift */; };
 		DD62DEFD202FDDEC0098AD95 /* Bundle+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62DEFC202FDDEC0098AD95 /* Bundle+Extentions.swift */; };
+		DD7F5DFE20357A3E00EE1D49 /* WBNetWorkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7F5DFD20357A3E00EE1D49 /* WBNetWorkManger.swift */; };
 		DD9D5CD6202A93B300C16CC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9D5CD5202A93B300C16CC4 /* AppDelegate.swift */; };
 		DD9D5CDD202A93B300C16CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9D5CDC202A93B300C16CC4 /* Assets.xcassets */; };
 		DD9D5CE0202A93B300C16CC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9D5CDE202A93B300C16CC4 /* LaunchScreen.storyboard */; };
@@ -51,6 +52,7 @@
 		DD34F797202FF9EF00D21A36 /* WB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WB-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD34F79D202FFCFF00D21A36 /* UIColor+Addtions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Addtions.swift"; sourceTree = "<group>"; };
 		DD62DEFC202FDDEC0098AD95 /* Bundle+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extentions.swift"; sourceTree = "<group>"; };
+		DD7F5DFD20357A3E00EE1D49 /* WBNetWorkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBNetWorkManger.swift; sourceTree = "<group>"; };
 		DD9D5CD2202A93B300C16CC4 /* WB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9D5CD5202A93B300C16CC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD9D5CDC202A93B300C16CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 				DD9D5D2A202ACCE500C16CC4 /* WBNavMianController.swift */,
 			);
 			path = "主控制器";
+			sourceTree = "<group>";
+		};
+		DD7F5DFC20357A1000EE1D49 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				DD7F5DFD20357A3E00EE1D49 /* WBNetWorkManger.swift */,
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 		DD9D5CC9202A93B300C16CC4 = {
@@ -264,6 +274,7 @@
 		DD9D5D27202AAE9D00C16CC4 /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				DD7F5DFC20357A1000EE1D49 /* NetWork */,
 				DDA6AA0A20300DF4003D058E /* Addtions(OC ) */,
 				DD62DEF9202FDD580098AD95 /* Extentions(swift) */,
 			);
@@ -366,6 +377,7 @@
 		DD9D5CCA202A93B300C16CC4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WB;
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "yang'yang";
@@ -441,13 +453,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WB/Pods-WB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -497,6 +521,7 @@
 				DD62DEFD202FDDEC0098AD95 /* Bundle+Extentions.swift in Sources */,
 				DD9D5D29202ACCB500C16CC4 /* WBTabbarViewController.swift in Sources */,
 				DDA474B4202FF585004EE6E3 /* WBMessageController.swift in Sources */,
+				DD7F5DFE20357A3E00EE1D49 /* WBNetWorkManger.swift in Sources */,
 				DD9D5D31202ACD8000C16CC4 /* WBHomeViewController.swift in Sources */,
 				DD9D5CD6202A93B300C16CC4 /* AppDelegate.swift in Sources */,
 				DD34F79E202FFCFF00D21A36 /* UIColor+Addtions.swift in Sources */,
@@ -672,7 +697,7 @@
 				DEVELOPMENT_TEAM = 852BN2UPEC;
 				INFOPLIST_FILE = WB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chinamobile.js.groupv;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangyangYY.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8b1872d2-8abd-4015-a6ef-23f143c432e0";
 				PROVISIONING_PROFILE_SPECIFIER = Ict_Groupv_Ent;
@@ -695,7 +720,7 @@
 				DEVELOPMENT_TEAM = 852BN2UPEC;
 				INFOPLIST_FILE = WB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chinamobile.js.groupv;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangyangYY.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8b1872d2-8abd-4015-a6ef-23f143c432e0";
 				PROVISIONING_PROFILE_SPECIFIER = Ict_Groupv_Ent;

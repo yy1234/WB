@@ -17,6 +17,12 @@ class WBHomeViewController: WBBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        setUpUI()
+        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+        let  parameters = ["access_token":"2.009ugrOG3mEohCac5d7d2d2f0bltVe"] as [String : AnyObject]
+        WBNetWorkManger.share.request(URLString: urlString, parameters: parameters ) { (json:AnyObject?, isSussess:Bool)->() in
+            print(json)
+        }
+        
     }
   
     override func loadData() {
