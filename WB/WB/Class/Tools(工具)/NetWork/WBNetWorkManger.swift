@@ -17,6 +17,25 @@ class WBNetWorkManger: NSObject {
     //实例化单例
     static let share=WBNetWorkManger()
     var result:AnyObject?
+    var access_token:String? = "2.009ugrOG3mEohCac5d7d2d2f0bltVe"
+    
+    
+    func tokenRequest(method: WBHTTPMethod = .GET, URLString: String,parameters: [String: AnyObject]?,complation:@escaping (_ json:AnyObject?,_ isSusscess:Bool)->()) -> () {
+        guard let token = access_token else {
+            complation(nil,false)
+            return
+        }
+        var parameters = parameters
+        if parameters == nil {
+            parameters = [String: AnyObject]()
+        }
+         //parameters一定不为空,所以强行解包
+        parameters!["access_token"] = token as AnyObject
+        request(method: method, URLString: URLString, parameters: parameters!, complation: complation)
+    }
+    
+    
+    
     
     func request(method: WBHTTPMethod = .GET, URLString: String,parameters: [String: AnyObject],complation:@escaping (_ json:AnyObject?,_ isSusscess:Bool)->()) {
         if method == .GET{

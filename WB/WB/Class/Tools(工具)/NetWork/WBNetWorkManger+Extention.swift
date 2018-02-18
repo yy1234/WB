@@ -11,20 +11,10 @@ import Foundation
 extension WBNetWorkManger{
     func stateRequest(complation:@escaping (_ json:AnyObject?,_ isSusscess:Bool)->()){
         let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
-        let  parameters = ["access_token":"2.009ugrOG3mEohCac5d7d2d2f0bltVe"] as [String : AnyObject]
-        request(URLString: urlString, parameters: parameters) { (jsonss, isSusscess) in
-            
-//            guard  let resultDic = json as? [String:AnyObject] else{
-//                complation(nil,isSusscess)
-//                return
-//            }
-//            let resultDic = json as? [String:AnyObject]
-            //mutableContainers
-//            let results=try? JSONSerialization.jsonObject(with: (jsonss as! NSData) as Data, options: JSONSerialization.ReadingOptions.mutableLeaves)
+        tokenRequest(URLString: urlString, parameters: nil) { (jsonss, isSusscess) in
             let result = jsonss!["statuses"]
             complation(result as AnyObject,isSusscess)
-            
-            }
+        }
     }
     
     

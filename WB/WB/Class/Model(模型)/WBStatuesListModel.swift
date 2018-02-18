@@ -6,9 +6,11 @@
 //  Copyright © 2018年 yang'yang. All rights reserved.
 //
 
+//这个模型为什么用YYModel不可解析----待解
 import UIKit
 import Foundation
 import YYModel
+
 class WBStatuesListModel: NSObject {
     //Int在64位机器上，默认64，32机器上默认32，不写Int64会造成数据溢出
     var id: Int64 = 0
