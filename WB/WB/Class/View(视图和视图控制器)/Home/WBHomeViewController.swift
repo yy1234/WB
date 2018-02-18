@@ -7,39 +7,25 @@
 //
 
 import UIKit
+//import Alamofire
 //全局变量一般设置成私有的
 private let cellID="cellID"
 class WBHomeViewController: WBBaseViewController {
     //懒加载一个数组
-    lazy var stateList = [String]()
-    
-    
+    lazy var statuesListViewModel = WBStatuesListViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setUpUI()
-        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
-        let  parameters = ["access_token":"2.009ugrOG3mEohCac5d7d2d2f0bltVe"] as [String : AnyObject]
-        WBNetWorkManger.share.request(URLString: urlString, parameters: parameters ) { (json:AnyObject?, isSussess:Bool)->() in
-            print(json)
-        }
-        
     }
   
+    
     override func loadData() {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
-            for i in 0..<15 {
-                if self.isPushing{
-                    self.stateList.append("上拉\(i)")
-                }else{
-                    self.stateList.insert(i.description, at: 0)
-                    
-                }
-            }
+        
+        statuesListViewModel.getStatusListModel { (isSuccess:Bool) in
             self.isPushing=false
             self.refreashController?.endRefreshing()
             self.tableView?.reloadData()
         }
-       
+    
      
     }
     //从写方法(不能在extetion中重写父类的方法)
@@ -78,12 +64,12 @@ class WBHomeViewController: WBBaseViewController {
 extension WBHomeViewController{
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stateList.count
+        return statuesListViewModel.statusList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        cell.textLabel?.text=stateList[indexPath.row]
+        cell.textLabel?.text=statuesListViewModel.statusList[indexPath.row].text
         return cell
     }
 }

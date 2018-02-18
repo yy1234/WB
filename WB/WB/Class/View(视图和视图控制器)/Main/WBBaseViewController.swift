@@ -12,7 +12,7 @@ import SnapKit
 ///swift中的写法，更像多继承
 class WBBaseViewController: UIViewController {
     var tableView:UITableView?
-    var userLogon = false
+    var userLogon = true
     
     var refreashController:UIRefreshControl?
     var isPushing:Bool=false
