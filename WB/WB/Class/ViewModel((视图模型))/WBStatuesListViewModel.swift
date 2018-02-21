@@ -20,17 +20,17 @@ import Alamofire
  */
 class WBStatuesListViewModel{
     lazy var statusList=[WBStatueModel]()
-    
+    var since_id:Int64?
     func getStatusListModel(complation:@escaping (_ isSuccess:Bool)->()) {
-        
-        WBNetWorkManger.share.stateRequest { (list, isSussess) in
+        since_id = statusList.first?.wb_id
+        WBNetWorkManger.share.stateRequest(since_id:since_id ?? 0, max_id:0) { (list, isSussess) in
           //1.字典转模型
 //            let arr =  try? JSONSerialization.data(withJSONObject: list, options: .prettyPrinted)
             guard  let arr = NSArray.yy_modelArray(with: WBStatueModel.self, json: list ?? []) as? [WBStatueModel] else{
                 complation(isSussess)
                 return
             }
-            self.statusList += arr
+            self.statusList = arr + self.statusList
             complation(isSussess)
            
 

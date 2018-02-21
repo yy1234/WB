@@ -11,5 +11,5 @@
 @interface WBStatueModel : NSObject
 @property (nonatomic,copy)NSString *text;
 
-@property (nonatomic,assign)long wb_id;
+@property (nonatomic,assign)int64_t wb_id;
 @end
