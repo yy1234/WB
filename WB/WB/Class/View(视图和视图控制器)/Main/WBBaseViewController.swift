@@ -49,7 +49,11 @@ class WBBaseViewController: UIViewController {
         tableView=UITableView.init(frame: view.bounds, style: .plain)
         tableView?.delegate=self
         tableView?.dataSource=self
-        tableView?.contentInsetAdjustmentBehavior=UIScrollViewContentInsetAdjustmentBehavior.never
+        if #available(iOS 11.0, *) {
+            tableView?.contentInsetAdjustmentBehavior=UIScrollViewContentInsetAdjustmentBehavior.never
+        } else {
+            // Fallback on earlier versions
+        }
         //防止被自定义的bar挡住
         view.insertSubview(tableView!, belowSubview: navigationBar)
         //设置tableView的偏移量

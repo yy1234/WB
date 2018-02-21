@@ -101,11 +101,17 @@ extension WBTabbarViewController{
 
   
     func timerInvadute(){
-        timer=Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { (time) in
-            WBNetWorkManger.share.getUnreadCount(complation: { (count) in
-                self.tabBar.items?[0].badgeValue = ""
+        if #available(iOS 10.0, *) {
+            timer=Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { (time) in
+                WBNetWorkManger.share.getUnreadCount(complation: { (count) in
+                    self.tabBar.items?[0].badgeValue = ""
+                    UIApplication.shared.applicationIconBadgeNumber=Int(count )!
+
+                })
             })
-        })
+        } else {
+            // Fallback on earlier versions
+        }
     }
    
 }

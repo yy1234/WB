@@ -714,6 +714,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 852BN2UPEC;
 				INFOPLIST_FILE = WB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangyangYY.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -737,6 +738,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 852BN2UPEC;
 				INFOPLIST_FILE = WB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangyangYY.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
