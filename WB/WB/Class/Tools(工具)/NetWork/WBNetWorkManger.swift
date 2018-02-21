@@ -18,6 +18,7 @@ class WBNetWorkManger: NSObject {
     static let share=WBNetWorkManger()
     var result:AnyObject?
     var access_token:String? = "2.009ugrOG3mEohCac5d7d2d2f0bltVe"
+    var uids:String? = ""
     
     
     func tokenRequest(method: WBHTTPMethod = .GET, URLString: String,parameters: [String: AnyObject]?,complation:@escaping (_ json:AnyObject?,_ isSusscess:Bool)->()) -> () {
@@ -48,6 +49,7 @@ class WBNetWorkManger: NSObject {
                     //发送通知，
                     if returnResult.response?.statusCode==403{
                         //token过期处理
+                    print("token过期")
                         return
                     }
                     let re=returnResult.value
@@ -56,7 +58,6 @@ class WBNetWorkManger: NSObject {
                 }
               
             }
-        
         
         }else{
             Alamofire.request(URLString, method: .post,parameters: parameters).responseJSON { (returnResult) in

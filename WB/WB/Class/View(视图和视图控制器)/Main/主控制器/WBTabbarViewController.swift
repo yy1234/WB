@@ -10,11 +10,13 @@ import UIKit
 
 class WBTabbarViewController: UITabBarController {
 //    var centerBtn:UIButton
+    private var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor=UIColor.white
         setUpChildController()
-       
+//        timerInvadute()
         
         //添加中间的加好按钮
         let centerBtn=UIButton.init()
@@ -29,6 +31,11 @@ class WBTabbarViewController: UITabBarController {
         centerBtn.addTarget(self, action: #selector(centerBtnClick), for: .touchUpInside)
     }
     
+    deinit {
+        print("定时器销毁")
+        timer?.invalidate()
+        
+    }
     @objc func centerBtnClick(){
         print("撰写微博")
         
@@ -91,9 +98,16 @@ extension WBTabbarViewController{
         
         return nav
     }
-    
+
   
-  
+    func timerInvadute(){
+        timer=Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { (time) in
+            WBNetWorkManger.share.getUnreadCount(complation: { (count) in
+                self.tabBar.items?[0].badgeValue = ""
+            })
+        })
+    }
+   
 }
 
 

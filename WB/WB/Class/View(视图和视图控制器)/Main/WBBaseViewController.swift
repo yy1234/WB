@@ -99,8 +99,9 @@ extension WBBaseViewController:UITableViewDataSource,UITableViewDelegate{
             return
         }
         if row-1==indexPath.row && !isPushing {
+            isPushing=true
             loadData()
-           isPushing=true
+          
         }
         
     }

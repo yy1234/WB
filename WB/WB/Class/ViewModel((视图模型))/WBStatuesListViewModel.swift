@@ -18,22 +18,33 @@ import Alamofire
  1.字典转模型
  2.下拉/上拉，刷新数据
  */
+
 class WBStatuesListViewModel{
     lazy var statusList=[WBStatueModel]()
-    var since_id:Int64?
-    func getStatusListModel(complation:@escaping (_ isSuccess:Bool)->()) {
-        since_id = statusList.first?.wb_id
-        WBNetWorkManger.share.stateRequest(since_id:since_id ?? 0, max_id:0) { (list, isSussess) in
+    //设置下拉，最大的允许错误
+    private var max_refreshCount = 3
+    private var refreshCount:Int=0
+    func getStatusListModel(isPullUp:Bool,complation:@escaping (_ isSuccess:Bool,_ isNeedRefresh:Bool)->()) {
+        if isPullUp && refreshCount>max_refreshCount {
+            complation(false,false)
+        }
+        //上拉刷新，since_id传值为0
+        let since_id:Int64 = isPullUp ? 0:(statusList.first?.wb_id ?? 0)
+        let max_id:Int64 = isPullUp ? (statusList.last?.wb_id ?? 0) : 0
+        WBNetWorkManger.share.stateRequest(since_id:since_id , max_id:max_id) { (list, isSussess) in
           //1.字典转模型
-//            let arr =  try? JSONSerialization.data(withJSONObject: list, options: .prettyPrinted)
             guard  let arr = NSArray.yy_modelArray(with: WBStatueModel.self, json: list ?? []) as? [WBStatueModel] else{
-                complation(isSussess)
+                 complation(false,false)
                 return
             }
+            
+            if isPullUp && arr.count==0{
+                self.refreshCount+=1
+                 complation(false,false)
+            }
             self.statusList = arr + self.statusList
-            complation(isSussess)
+            complation(isSussess,true)
            
-
         }
     }
     

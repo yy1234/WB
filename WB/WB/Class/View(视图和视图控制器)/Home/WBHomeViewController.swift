@@ -20,10 +20,13 @@ class WBHomeViewController: WBBaseViewController {
     
     override func loadData() {
         
-        statuesListViewModel.getStatusListModel { (isSuccess:Bool) in
+        statuesListViewModel.getStatusListModel(isPullUp: self.isPushing) { (isSuccess:Bool,isNeedRefresh:Bool) in
             self.isPushing=false
             self.refreashController?.endRefreshing()
-            self.tableView?.reloadData()
+            if isNeedRefresh{
+              self.tableView?.reloadData()
+            }
+        
         }
     
      

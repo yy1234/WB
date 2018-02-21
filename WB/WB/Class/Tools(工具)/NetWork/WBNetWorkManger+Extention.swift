@@ -19,5 +19,16 @@ extension WBNetWorkManger{
         }
     }
     
+    func getUnreadCount(complation:@escaping(_ count:String)->()) {
+        let urlString = "https://api.weibo.com/2/users/counts.json"
+        guard let uids=uids else {
+            return
+        }
+        let parameters = ["uids":uids]
+        tokenRequest(URLString: urlString, parameters: parameters as [String : AnyObject]) { (json, isSuccess) in
+            complation("")
+            
+        }
+    }
     
 }
