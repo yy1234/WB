@@ -12,7 +12,6 @@ import SnapKit
 ///swift中的写法，更像多继承
 class WBBaseViewController: UIViewController {
     var tableView:UITableView?
-    var userLogon = true
     
     var refreashController:UIRefreshControl?
     var isPushing:Bool=false
@@ -22,7 +21,7 @@ class WBBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        loadData()
+        WBNetWorkManger.share.isLogin ? loadData(): ()
     }
     
     //重写title的set方法
@@ -40,7 +39,7 @@ class WBBaseViewController: UIViewController {
      func setUpUI()->Void{
         view.backgroundColor=UIColor.randomColor()
         setNavBar()
-        userLogon ? setTableView():setVisterView()
+        WBNetWorkManger.share.isLogin ? setTableView():setVisterView()
      
     }
  
@@ -80,6 +79,15 @@ class WBBaseViewController: UIViewController {
         //        navigationBar.barTintColor=UIColor.HexClour(hexColor: 0xF6F6F6)
         //设置标题颜色
         navigationBar.titleTextAttributes=[NSAttributedStringKey.foregroundColor:UIColor.darkGray];
+        WBNetWorkManger.share.isLogin ? ():setNavBtn()
+    }
+    func setNavBtn(){
+        navItem.rightBarButtonItem=UIBarButtonItem.init(title: "注册", target: self, action: #selector(regsing))
+    }
+    
+    @objc func regsing(){
+        let nav = UINavigationController(rootViewController: WBLoginViewController())
+        self.tabBarController?.present(nav, animated: true, completion: nil)
     }
 }
 

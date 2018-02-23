@@ -22,6 +22,8 @@
 		DD9D5D31202ACD8000C16CC4 /* WBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9D5D30202ACD8000C16CC4 /* WBHomeViewController.swift */; };
 		DD9F29D320395D620084F599 /* WBStatuesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F29D220395D620084F599 /* WBStatuesListViewModel.swift */; };
 		DD9F29D520395E6A0084F599 /* WBStatuesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F29D420395E6A0084F599 /* WBStatuesListModel.swift */; };
+		DDA37FF620406B9900BDD7A8 /* WBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA37FF520406B9900BDD7A8 /* WBLoginViewController.swift */; };
+		DDA37FF820406D7600BDD7A8 /* WBCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA37FF720406D7600BDD7A8 /* WBCommon.swift */; };
 		DDA474B4202FF585004EE6E3 /* WBMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B3202FF585004EE6E3 /* WBMessageController.swift */; };
 		DDA474B8202FF5AA004EE6E3 /* WBProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B7202FF5AA004EE6E3 /* WBProfileController.swift */; };
 		DDA474BA202FF5FE004EE6E3 /* WBDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA474B9202FF5FE004EE6E3 /* WBDiscoverController.swift */; };
@@ -73,6 +75,8 @@
 		DD9D5D30202ACD8000C16CC4 /* WBHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBHomeViewController.swift; sourceTree = "<group>"; };
 		DD9F29D220395D620084F599 /* WBStatuesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatuesListViewModel.swift; sourceTree = "<group>"; };
 		DD9F29D420395E6A0084F599 /* WBStatuesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatuesListModel.swift; sourceTree = "<group>"; };
+		DDA37FF520406B9900BDD7A8 /* WBLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBLoginViewController.swift; sourceTree = "<group>"; };
+		DDA37FF720406D7600BDD7A8 /* WBCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBCommon.swift; sourceTree = "<group>"; };
 		DDA474B3202FF585004EE6E3 /* WBMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBMessageController.swift; sourceTree = "<group>"; };
 		DDA474B7202FF5AA004EE6E3 /* WBProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBProfileController.swift; sourceTree = "<group>"; };
 		DDA474B9202FF5FE004EE6E3 /* WBDiscoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDiscoverController.swift; sourceTree = "<group>"; };
@@ -291,6 +295,7 @@
 				DD7F5DFC20357A1000EE1D49 /* NetWork */,
 				DDA6AA0A20300DF4003D058E /* Addtions(OC ) */,
 				DD62DEF9202FDD580098AD95 /* Extentions(swift) */,
+				DDA37FF720406D7600BDD7A8 /* WBCommon.swift */,
 			);
 			path = "Tools(工具)";
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				DDFDBD672032EBB5002F9013 /* WBVisterView.swift */,
+				DDA37FF520406B9900BDD7A8 /* WBLoginViewController.swift */,
 			);
 			path = "VisterView(访客视图)";
 			sourceTree = "<group>";
@@ -532,6 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA37FF620406B9900BDD7A8 /* WBLoginViewController.swift in Sources */,
 				DD62DEFD202FDDEC0098AD95 /* Bundle+Extentions.swift in Sources */,
 				DD9F29D320395D620084F599 /* WBStatuesListViewModel.swift in Sources */,
 				DD9D5D29202ACCB500C16CC4 /* WBTabbarViewController.swift in Sources */,
@@ -550,6 +557,7 @@
 				DDFDBD6520303E49002F9013 /* UIBarButtonItem+Extention.swift in Sources */,
 				DD9D5D2D202ACCFB00C16CC4 /* WBBaseViewController.swift in Sources */,
 				DDA474BA202FF5FE004EE6E3 /* WBDiscoverController.swift in Sources */,
+				DDA37FF820406D7600BDD7A8 /* WBCommon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

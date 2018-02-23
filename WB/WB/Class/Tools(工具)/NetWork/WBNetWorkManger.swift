@@ -17,8 +17,11 @@ class WBNetWorkManger: NSObject {
     //实例化单例
     static let share=WBNetWorkManger()
     var result:AnyObject?
-    var access_token:String? = "2.009ugrOG3mEohCac5d7d2d2f0bltVe"
+    var access_token:String? //= "2.009ugrOG3mEohCac5d7d2d2f0bltVe"
     var uids:String? = ""
+    var isLogin: Bool{
+        return access_token != nil
+    }
     
     
     func tokenRequest(method: WBHTTPMethod = .GET, URLString: String,parameters: [String: AnyObject]?,complation:@escaping (_ json:AnyObject?,_ isSusscess:Bool)->()) -> () {
