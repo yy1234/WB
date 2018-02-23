@@ -17,14 +17,14 @@ class WBTabbarViewController: UITabBarController {
         self.view.backgroundColor=UIColor.white
         setUpChildController()
 //        timerInvadute()
-        
+        delegate = self
         //添加中间的加好按钮
         let centerBtn=UIButton.init()
         centerBtn.backgroundColor=UIColor.orange
         centerBtn.frame=CGRect(x: 0, y: 0, width: 68, height: 68)
         tabBar.addSubview(centerBtn)
         let count = CGFloat(childViewControllers.count)
-        let w = (tabBar.frame.size.width/count)-1
+        let w = (tabBar.frame.size.width/count)
         
         //insetBy正数向内，负数向外
         centerBtn.frame=tabBar.bounds.insetBy(dx: 2*w, dy: 0)
@@ -116,5 +116,25 @@ extension WBTabbarViewController{
    
 }
 
+// MARK: - UITabBarControllerDelegate代理
+extension WBTabbarViewController:UITabBarControllerDelegate{
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool{
+  
+        //1.拿到将要跳转的控制器,和当前的控制器作比较，是不是同一个控制器
+        let currentNavIndex = tabBarController.selectedIndex
+        let willSelectIndex = childViewControllers.index(of: viewController)
+        //2.首页的tableView做滑动
+        if currentNavIndex == willSelectIndex && currentNavIndex == 0{
+            let Nav = childViewControllers[willSelectIndex!] as? WBNavMianController
+            let vc = Nav?.childViewControllers[0] as! WBHomeViewController
+            vc.tableView?.setContentOffset(CGPoint(x:0,y:-64), animated: true)
+        }
 
+    return viewController.isMember(of: WBNavMianController.self)
+    }
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+         print("")
+    }
+    
+}
 
