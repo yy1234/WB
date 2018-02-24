@@ -14,6 +14,8 @@ class WBLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view=webView
+        webView.delegate=self
+        webView.scrollView.isScrollEnabled=false
         navigationItem.leftBarButtonItem=UIBarButtonItem.init(title: "返回", target: self, action: #selector(backAction), isBack: true)
         navigationItem.rightBarButtonItem=UIBarButtonItem.init(title: "自动填充", target: self, action: #selector(autoLogin))
         loadUrl()
@@ -40,3 +42,27 @@ class WBLoginViewController: UIViewController {
     }
 
 }
+
+extension WBLoginViewController:UIWebViewDelegate{
+    
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+     //目的是拿取code,和加载的URL如果是以www.baidu.com开始的，就不加载
+        let urlStr = request.url?.absoluteString
+        //bool的类型有true/false/nil几种类型
+        if urlStr?.hasPrefix(callBackUrl) == false {
+            return true
+        }
+        //寻找code
+        if urlStr?.hasPrefix("code=") == false{
+            backAction()
+            return false
+        }
+        //request.url?.query
+        let code = request.url?.query?.substring(from: "code=".endIndex) ?? ""
+        return false
+    }
+    
+}
+
+
+

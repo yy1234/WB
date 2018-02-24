@@ -11,4 +11,5 @@ import Foundation
 let AppKey = "4092862767"
 //应用的加密秘钥
 let AppSecret = "b9f52c698ae46b28e40142ea0c25e7f8"
-let callBackUrl = "www.baidu.com"
+let callBackUrl = "http://www.baidu.com"
+
